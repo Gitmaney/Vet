@@ -1,0 +1,816 @@
+/* -------------------------------------------- */
+/* ---------------- RESET CSS ----------------- */
+/* -------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+li {
+    list-style-type: none;
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* -------------------------------------------- */
+/* --------------- IMPORT FONTS --------------- */
+/* -------------------------------------------- */
+
+@font-face {
+    font-family: "Futura";
+    src: url("../fonts/FuturaPT/FuturaPT-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal; }
+@font-face {
+    font-family: "Futura";
+    src: url("../fonts/FuturaPT/FuturaPT-Book.woff") format("woff");
+    font-weight: 400;
+    font-style: normal; }
+@font-face {
+    font-family: "Futura";
+    src: url("../fonts/FuturaPT/FuturaPT-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal; }
+@font-face {
+    font-family: "Futura";
+    src: url("../fonts/FuturaPT/FuturaPT-Demi.woff") format("woff");
+    font-weight: 600;
+    font-style: normal; }
+@font-face {
+    font-family: "Futura";
+    src: url("../fonts/FuturaPT/FuturaPT-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal; }
+@font-face {
+    font-family: "Playfair";
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot");
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.ttf") format("truetype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular/PlayfairDisplay-Regular.svg") format("svg");
+    font-weight: 400;
+    font-style: normal; }
+@font-face {
+    font-family: "Playfair";
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.eot");
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.woff") format("woff"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.ttf") format("truetype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Italic/PlayfairDisplay-Italic.svg") format("svg");
+    font-weight: 400;
+    font-style: italic; }
+@font-face {
+    font-family: "Playfair";
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.eot");
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.woff") format("woff"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.ttf") format("truetype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Bold/PlayfairDisplay-Bold.svg") format("svg");
+    font-weight: 700;
+    font-style: normal; }
+@font-face {
+    font-family: "Playfair";
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.eot");
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.woff") format("woff"), url("../fonts/PlayfairDisplay/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.ttf") format("truetype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.svg") format("svg");
+    font-weight: 700;
+    font-style: italic; }
+@font-face {
+    font-family: "Playfair";
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.eot");
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.woff") format("woff"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.ttf") format("truetype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-Black/PlayfairDisplay-Black.svg") format("svg");
+    font-weight: 900;
+    font-style: normal; }
+@font-face {
+    font-family: "Playfair";
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic.eot");
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic.woff") format("woff"), url("../fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic.ttf") format("truetype"), url("../fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic/PlayfairDisplay-BlackItalic.svg") format("svg");
+    font-weight: 900;
+    font-style: italic; }
+
+/* -------------------------------------------- */
+/* ------------- GENERAL SETTINGS ------------- */
+/* -------------------------------------------- */
+
+body {
+    background-color: #000000;
+    color: #CCCCCC;
+    width: 100%;
+}
+.mlx-container {
+    width: 1100px;
+    margin: 0 auto 80px;
+}
+.mlx-overflowHidden {
+    overflow: hidden;
+}
+.mlx-bg {
+    position: absolute;
+    width: 800px;
+    margin: 0 150px;
+}
+.mlx-title-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 150px;
+}
+.mlx-title-group h1 {
+    font: 300 80px/89px "Playfair", serif;
+    padding: 0 0 20px;
+    margin: 0;
+}
+.mlx-title-group p {
+    color: #B0976D;
+    font: 600 14px/16px "Futura", sans-serif;
+    margin: 5px 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.mlx-title-group-right{
+    align-items: flex-end;
+    width: 100%;
+}
+.mlx-title-group-right p{
+    text-align: right;
+}
+@media (max-width: 1300px) {
+    .mlx-container {
+        width: 90%;
+        padding: 0 5%;
+        margin: 0;
+    }
+    .mlx-bg {
+        width: 70%;
+        margin: 0 10%;
+    }
+    .mlx-title-group p {
+        font: 700 16px/16px "Futura", sans-serif;
+    }
+}
+@media (max-width: 720px) {
+    .mlx-title-group {
+        margin-top: 0px;
+    }
+    .mlx-title-group h1 {
+        font: 300 56px/36px "Playfair", serif;
+    }
+    .mlx-title-multilines h1 {
+        font: 300 56px/60px "Playfair", serif;
+        letter-spacing: 2px;
+    }
+    .mlx-title-group p {
+        font: 700 12px/16px "Futura", sans-serif;
+    }
+}
+@media (max-width: 460px) {
+    .mlx-title-group h1 {
+        font: 300 32px/12px "Playfair", serif;
+    }
+    .mlx-title-multilines h1 {
+        font: 300 32px/36px "Playfair", serif;
+    }
+    .mlx-title-group p {
+        font: 700 14px/20px "Futura", sans-serif;
+        letter-spacing: 1px;
+    }
+}
+
+/* -------------------------------------------- */
+/* ---------------- NAV STYLE ----------------- */
+/* -------------------------------------------- */
+
+.mlx-navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 150px;
+    margin-bottom: 190px;
+    z-index: 2;
+}
+.mlx-navbar-logo {
+    height: 100%;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mlx-navbar-logo img {
+    max-height: 100%;
+    max-width: 100%;
+}
+.mlx-navbar-menu {
+    flex: 15;
+    display: flex;
+    justify-content: flex-end;
+}
+.mlx-navbar-menu a {
+    margin: 15px;
+    font: normal 700 10px/30px "Futura", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3.6px;
+}
+.mlx-navbar-menu a:last-child {
+    margin-right: 0;
+}
+@media (max-width: 900px) {
+    .mlx-navbar {
+        margin-bottom: 100px;
+    }
+}
+@media (max-width: 550px) {
+    .mlx-navbar {
+        height: 100px;
+    }
+}
+@media (max-width: 460px) {
+    .mlx-navbar {
+        margin-bottom: 50px;
+    }
+}
+
+/* -------------------------------------------- */
+/* ----------- HAMBURGER NAV STYLE ------------ */
+/* -------------------------------------------- */
+
+.mlx-hamburger-menu {
+    display: none;
+    flex: 1;
+    justify-content: flex-end;
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+}
+.mlx-bar,
+.mlx-bar:after,
+.mlx-bar:before {
+    width: 60px;
+    height: 5px;
+}
+.mlx-bar {
+    position: relative;
+    transform: translateY(25px);
+    background: white;
+    transition: all 0ms 300ms;
+}
+.mlx-bar.mlx-animate {
+    background: rgba(255, 255, 255, 0);
+}
+.mlx-bar:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    background: white;
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mlx-bar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    background: white;
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mlx-bar.mlx-animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mlx-bar.mlx-animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mlx-navbar-hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 1;
+    transition: all 1s;
+}
+.mlx-navbar-hamburger-menu-active{
+    display: flex;
+}
+.mlx-navbar-hamburger-menu a {
+    margin: 25px;
+    font-family: "Playfair", "Times New Roman", serif;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+@media (max-width: 1100px) {
+    .mlx-hamburger-menu {
+        display: flex;
+    }
+    .mlx-navbar-menu {
+        display: none;
+    }
+}
+
+/* -------------------------------------------- */
+/* ---------------- HOME STYLE ---------------- */
+/* -------------------------------------------- */
+
+.mlx-article {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 25%;
+    margin-left: 75%;
+}
+.mlx-article h3 {
+    font: 600 35px/35px "Futura", sans-serif;
+    letter-spacing: -1px;
+    margin: 0 0 20px;
+}
+.mlx-article p {
+    position: relative;
+    font: 100 16px/24px "Helvetica Neue", "Playfair", serif;
+    color: #CCCCCC;
+    word-wrap: break-word;
+}
+.mlx-article p span {
+    color: #B0976D;
+    font-weight: 600;
+}
+.mlx-presentation {
+    width: 66.666%;
+    margin-top: 100px;
+    margin-left: 33.332%;
+    margin-bottom: 50px;
+    position: relative;
+}
+.mlx-presentation h2 {
+    margin: 0 0 50px;
+    font: normal 600 35px/40px "Futura", sans-serif;
+    letter-spacing: -2px;
+    color: #B0976D;
+}
+.mlx-presentation p {
+    font: 300 20px/30px "Futura", sans-serif;
+}
+@media (min-width: 761px) {
+    .mlx-presentation p {
+        column-count: 2;
+        column-gap: 50px;
+    }
+}
+@media (max-width: 1100px) {
+    .mlx-article {
+        width: 66.666%;
+        margin-left: 33.332%;
+        margin-top: 125px;
+    }
+    .mlx-article h3 {
+        font: 600 46px/46px "Futura", sans-serif;
+    }
+    .mlx-article p {
+        font: 200 22px/34px "Futura", "Playfair", serif;
+    }
+    .mlx-presentation {
+        width: 100%;
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    .mlx-presentation h2 {
+        font: 600 46px/46px "Futura", sans-serif;
+    }
+    .mlx-presentation p {
+        font: 200 22px/34px "Futura", "Playfair", serif;
+    }
+}
+@media (max-width: 700px) {
+    .mlx-article {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 90px;
+    }
+    .mlx-article h3 {
+        font: 600 46px/46px "Futura", sans-serif;
+    }
+    .mlx-article p {
+        font: 200 22px/34px "Futura", "Playfair", serif;
+    }
+    .mlx-presentation {
+        width: 100%;
+        margin-top: 60px;
+        margin-left: 0;
+    }
+    .mlx-presentation h2 {
+        font: 600 46px/46px "Futura", sans-serif;
+        margin-bottom: 20px;
+    }
+    .mlx-presentation p {
+        font: 200 22px/34px "Futura", "Playfair", serif;
+    }
+}
+@media (max-width: 760px) {
+    .mlx-article h3 {
+        font: 600 30px/34px "Futura", sans-serif;
+    }
+    .mlx-article p {
+        font: 200 18px/30px "Futura", "Playfair", serif;
+    }
+    .mlx-presentation h2 {
+        font: 600 30px/34px "Futura", sans-serif;
+    }
+    .mlx-presentation p {
+        font: 200 18px/30px "Futura", "Playfair", serif;
+    }
+}
+@media (max-width: 460px) {
+    .mlx-article {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 60px;
+    }
+}
+
+/* -------------------------------------------- */
+/* -------------- SERVICES STYLE -------------- */
+/* -------------------------------------------- */
+
+.mlx-services {
+    margin-bottom: 50px;
+}
+.mlx-services-gallery {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.mlx-services-gallery-item{
+    width: 30%;
+    margin-bottom: 50px;
+}
+.mlx-services-gallery-item img {
+    width: 60px;
+}
+.mlx-services-gallery-item h2 {
+    font: 600 30px/35px "Futura", sans-serif;
+    margin-bottom: 15px;
+}
+.mlx-services-gallery-item p {
+    font: 300 20px/30px "Futura", sans-serif;
+}
+@media (max-width: 980px) {
+    .mlx-services-gallery-item{
+        width: 45%;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 760px) {
+    .mlx-services-gallery {
+        margin-top: 30px;
+    }
+    .mlx-services-gallery-item{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .mlx-services-gallery-item h2 {
+        font: 600 30px/34px "Futura", sans-serif;
+    }
+    .mlx-services-gallery-item p {
+        font: 200 18px/30px "Futura", "Playfair", serif;
+    }
+}
+
+/* -------------------------------------------- */
+/* -------------- TEAM DIV STYLE -------------- */
+/* -------------------------------------------- */
+
+.mlx-team {
+    margin-bottom: 50px;
+}
+.mlx-team-galery {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mlx-team-gallery-item{
+    width: 33.33%;
+}
+.mlx-team-gallery-item img {
+    width: 100%;
+}
+.mlx-team-member {
+    display: flex;
+    opacity: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: -560px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(0,0,0,0.65);
+    transition-duration: 500ms;
+}
+.mlx-team-member-info {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.mlx-team-member h2 {
+    font: 400 32px "Playfair", serif;
+    text-align: center;
+}
+.mlx-team-member h3 {
+    font: 600 25px "Futura", sans-serif;
+    color: #B0976D;
+    font-variant-caps: all-small-caps;
+    text-align: center;
+}
+.mlx-team-member p {
+    font: 300 20px "Futura", sans-serif;
+    text-align: center;
+}
+.mlx-team-gallery-item:hover > .team-member{
+    opacity: 1;
+}
+@media (max-width: 1100px) {
+    .mlx-team-gallery-item{
+        width: 33.33%;
+    }
+    .mlx-team-member h2 {
+        font: 400 22px "Playfair", serif;
+    }
+
+    .mlx-team-member p {
+        font: 300 16px "Futura", sans-serif;
+    }
+}
+@media (max-width: 820px) {
+    .mlx-team-gallery-item {
+        width: 50%;
+    }
+}
+@media (max-width: 500px) {
+    .mlx-team-member h2 {
+        font: 400 22px "Playfair", serif;
+    }
+    .mlx-team-member p {
+        font: 300 16px "Futura", sans-serif;
+    }
+}
+
+/* -------------------------------------------- */
+/* --------------- CONTACT STYLE -------------- */
+/* -------------------------------------------- */
+
+#map {
+    position: absolute;
+    overflow: hidden;
+    margin-top: 70px;
+    left: 0;
+    right: 0;
+    height: 450px;
+}
+.mlx-contact-coord {
+    display: flex;
+    margin: 620px 0 70px;
+}
+.mlx-contact-coord-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mlx-contact-coord-item img {
+    max-width: 80px;
+}
+.mlx-contact-coord-item p {
+    margin: 20px;
+    font: 300 14px "Futura", sans-serif;
+    text-transform: uppercase;
+}
+.mlx-contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 100px;
+}
+.mlx-contact-form label {
+    margin: 30px 0 0 0;
+    color: #B0976D;
+    font: 600 14px "Futura", sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+.mlx-contact-form input, .mlx-contact-form textarea {
+    margin: 10px 0;
+    width: 92%;
+    border: none;
+    border-radius: 0;
+    background-color: #1C1C1C;
+    font: 500 14px "Futura", sans-serif;
+    color: #FFFFFF;
+}
+.mlx-contact-form input {
+    height: 60px;
+    padding: 0 4%;
+    text-transform: uppercase;
+}
+.mlx-contact-form textarea {
+    height: 160px;
+    padding: 15px 4%;
+    resize: none;
+}
+.mlx-contact-form input[type="submit"] {
+    width: 300px;
+    margin-top: 30px;
+    color: #B0976D;
+    font: 600 14px "Futura", sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+.mlx-contact-form input[type="submit"]:hover {
+    background-color: #B0976D;
+    color: #1C1C1C;
+}
+@media (max-width: 1100px) {
+    .mlx-contact-coord-item p {
+        font: 500 18px/34px "Futura", "Helvetica Neue", serif;
+        text-align: center;
+    }
+    .mlx-contact-form label, .mlx-contact-form input[type="submit"] {
+        font: 600 20px "Futura", sans-serif;
+    }
+}
+@media (max-width: 730px) {
+    .mlx-contact-coord {
+        flex-wrap: wrap;
+    }
+    .mlx-contact-coord-item {
+        flex: initial;
+        width: 100%;
+        margin: 5px 0;
+    }
+    .mlx-contact-coord-item img {
+         max-width: 40px;
+     }
+    .mlx-contact-coord-item p {
+        margin: 5px 0 15px;
+    }
+}
+@media (max-width: 520px) {
+    .mlx-contact-form input[type="submit"] {
+        width: 100%;
+    }
+    .mlx-contact-form label, .mlx-contact-form input[type="submit"] {
+        font: 600 16px "Futura", sans-serif;
+    }
+}
+
+/* -------------------------------------------- */
+/* --------------- FOOTER STYLE --------------- */
+/* -------------------------------------------- */
+
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #1C1C1C;
+}
+.mlx-footer-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mlx-footer-container img {
+    margin: 80px 0;
+    max-width: 400px;
+}
+.mlx-footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0 25px;
+    width: 1100px;
+    border-top: 3px solid #888888;
+    font: 600 14px "Futura", sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.mlx-footer-links ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.mlx-footer-links ul li {
+    margin: 0 10px;
+    color: #888888;
+    transition-duration: 350ms;
+}
+
+.mlx-footer-links ul li:hover {
+    margin: 0 10px;
+    color: #FFFFFF;
+}
+.mlx-footer-links-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888888;
+    transition-duration: 350ms;
+}
+.mlx-footer-links-link:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.mlx-footer-links img {
+    max-width: 200px;
+    margin: 0;
+}
+@media (max-width: 1300px) {
+    .mlx-footer-links {
+        width: 90%;
+        padding: 0 5%;
+        margin: 0;
+    }
+}
+@media (max-width: 1100px) {
+    .mlx-footer-links {
+        font: 900 16px "Futura", sans-serif;
+    }
+    .mlx-top-page {
+        display: none;
+    }
+    .mlx-footer-links img {
+        margin: 5%;
+    }
+}
+@media (max-width: 810px) {
+    .mlx-footer-links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .mlx-footer-links ul {
+        margin-top: 35px;
+    }
+    .mlx-footer-links img {
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 480px) {
+    .mlx-footer-container img {
+        max-width: 80%;
+    }
+    .mlx-footer-links ul {
+        flex-direction: column;
+    }
+    .mlx-footer-links ul li {
+        margin: 10px 0;
+    }
+    .mlx-footer-links img {
+        margin-top: 35px;
+    }
+}

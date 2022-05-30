@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'playfair_displaybold';
+    src: url('PlayfairDisplay-Bold-webfont.eot');
+    src: url('PlayfairDisplay-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PlayfairDisplay-Bold-webfont.woff2') format('woff2'),
+         url('PlayfairDisplay-Bold-webfont.woff') format('woff'),
+         url('PlayfairDisplay-Bold-webfont.ttf') format('truetype'),
+         url('PlayfairDisplay-Bold-webfont.svg#playfair_displaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
